@@ -1,0 +1,13 @@
+{
+  "request_id": "tx-123",
+  "payload": {
+    "user": {
+      "name": "Alice",
+      "address": {
+        "city": "New York",
+        "zip": "10001"
+      },
+      "status": "ACTIVE"
+    }
+  }
+}

@@ -39,4 +39,4 @@ jobs:
 
       # 4. Запускаем сборку и тесты
       - name: Build and check coverage with Gradle
-        run: ./gradlew check
+        run: ./gradlew check --no-configuration-cache

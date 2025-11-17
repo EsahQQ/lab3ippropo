@@ -86,5 +86,5 @@ tasks.check {
 
 checkstyle {
     toolVersion = "10.12.3"
-    configFile = rootProject.file("config/checkstyle/checkstyle.xml")
+    //configFile = rootProject.file("config/checkstyle/checkstyle.xml")
 }

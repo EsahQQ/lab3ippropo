@@ -9,6 +9,7 @@ plugins {
     // Apply the application plugin to add support for building a CLI application in Java.
     application
     jacoco
+    checkstyle
 }
 
 repositories {
@@ -81,4 +82,9 @@ tasks.jacocoTestCoverageVerification {
 
 tasks.check {
     dependsOn(tasks.jacocoTestCoverageVerification)
+}
+
+checkstyle {
+    toolVersion = "10.12.3"
+    configFile = rootProject.file("config/checkstyle/checkstyle.xml")
 }

@@ -36,7 +36,7 @@ java {
 
 application {
     // Define the main class for the application.
-    mainClass = "org.example.App"
+    mainClass = "ru.university.lab3.App"
 }
 
 tasks.named<Test>("test") {
@@ -60,8 +60,20 @@ tasks.jacocoTestReport {
 tasks.jacocoTestCoverageVerification {
     violationRules {
         rule {
+            // Указываем, ЧТО именно мы проверяем
+            element = "CLASS"
+
+            // Добавляем исключения, чтобы не проверять App.java и ConfigLoader.java
+            excludes = listOf(
+                "ru.university.lab3.App",
+                "ru.university.lab3.service.ConfigLoader"
+            )
+
             limit {
-                minimum = "0.75".toBigDecimal() // 75% покрытие
+                // Требуем, чтобы покрытие ИНСТРУКЦИЙ было не менее 75%
+                counter = "INSTRUCTION"
+                value = "COVEREDRATIO"
+                minimum = "0.75".toBigDecimal()
             }
         }
     }

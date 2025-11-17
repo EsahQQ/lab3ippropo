@@ -22,6 +22,17 @@ jobs:
           java-version: '21'
           distribution: 'temurin'
 
+      # Кэширование
+      - name: Cache Gradle packages
+        uses: actions/cache@v4
+        with:
+          path: |
+            ~/.gradle/caches
+            ~/.gradle/wrapper
+          key: ${{ runner.os }}-gradle-${{ hashFiles('**/*.gradle*', '**/gradle-wrapper.properties') }}
+          restore-keys: |
+            ${{ runner.os }}-gradle-
+
       # 3. Даем права на выполнение Gradle-скрипту (этот шаг мы уже сделали)
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew

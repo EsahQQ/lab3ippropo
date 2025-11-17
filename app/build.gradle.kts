@@ -16,6 +16,7 @@ repositories {
 }
 
 dependencies {
+    implementation("com.fasterxml.jackson.core:jackson-databind:2.15.2")
     // Use JUnit Jupiter for testing.
     testImplementation(libs.junit.jupiter)
 

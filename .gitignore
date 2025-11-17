@@ -4,25 +4,17 @@
 # Log file
 *.log
 
-# Package Files #
-*.jar
-*.war
-*.ear
-*.zip
-*.tar.gz
-*.rar
-
 # IntelliJ IDEA
 .idea/
 *.iml
 out/
 
 # Gradle
-.gradle
+.gradle/
 build/
-!build/config/
+
+# Добавляем явное исключение, чтобы этот файл НИКОГДА не игнорировался
+!gradle/wrapper/gradle-wrapper.jar
 
 # Конфигурационный файл
 app.properties
-# Ignore Gradle build output directory
-build

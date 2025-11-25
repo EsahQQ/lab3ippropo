@@ -47,7 +47,7 @@ tasks.jacocoTestCoverageVerification {
             element = "CLASS"
             excludes = listOf(
                 "ru.university.lab3.App",
-                "ru.university.lab3.service.ConfigLoader"
+                "ru.university.lab3.config.ConfigLoader"
             )
             limit {
                 counter = "INSTRUCTION"
@@ -66,10 +66,3 @@ checkstyle {
     configFile = file("checkstyle.xml")
 }
 
-/*
-tasks.named("checkstyleMain").configure {
-    enabled = false
-}
-tasks.named("checkstyleTest").configure {
-    enabled = false
-}*/

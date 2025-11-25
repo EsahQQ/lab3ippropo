@@ -1,20 +1,18 @@
-# Compiled class file
-*.class
-
-# Log file
-*.log
-
-# IntelliJ IDEA
 .idea/
 *.iml
-out/
+*.iws
+*.ipr
+.DS_Store
+Thumbs.db
 
-# Gradle
 .gradle/
 build/
+*/build/
+out/
 
-# Добавляем явное исключение, чтобы этот файл НИКОГДА не игнорировался
+*.log
+
+**/app.properties
+
 !gradle/wrapper/gradle-wrapper.jar
-
-# Конфигурационный файл
-app.properties
+!gradle/wrapper/gradle-wrapper.properties

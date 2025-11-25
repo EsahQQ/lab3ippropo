@@ -19,7 +19,6 @@ public class App {
             System.err.println("Error: Environment variable INPUT_JSON is not set.");
             return;
         }
-
         // Загрузка конфигурации
         ConfigLoader config = new ConfigLoader();
         config.load("app.properties");

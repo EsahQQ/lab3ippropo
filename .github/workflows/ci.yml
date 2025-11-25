@@ -11,18 +11,15 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-      # 1. Скачиваем код репозитория
       - name: Checkout repository
         uses: actions/checkout@v4
 
-      # 2. Устанавливаем Java (JDK 21)
       - name: Set up JDK 21
         uses: actions/setup-java@v4
         with:
           java-version: '21'
           distribution: 'temurin'
 
-      # Кэширование
       - name: Cache Gradle packages
         uses: actions/cache@v4
         with:
@@ -33,10 +30,8 @@ jobs:
           restore-keys: |
             ${{ runner.os }}-gradle-
 
-      # 3. Даем права на выполнение Gradle-скрипту (этот шаг мы уже сделали)
       - name: Grant execute permission for gradlew
         run: chmod +x gradlew
 
-      # 4. Запускаем сборку и тесты
       - name: Build and check coverage with Gradle
         run: ./gradlew check --no-configuration-cache

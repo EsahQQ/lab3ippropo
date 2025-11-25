@@ -63,5 +63,5 @@ tasks.check {
 
 checkstyle {
     toolVersion = "10.12.3"
-    configDirectory = file("$rootDir/config/checkstyle")
+    configFile = file("checkstyle.xml")
 }

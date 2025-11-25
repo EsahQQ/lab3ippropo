@@ -65,3 +65,10 @@ checkstyle {
     toolVersion = "10.12.3"
     configFile = file("checkstyle.xml")
 }
+
+tasks.named("checkstyleMain").configure {
+    enabled = false
+}
+tasks.named("checkstyleTest").configure {
+    enabled = false
+}

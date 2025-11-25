@@ -2,7 +2,7 @@ package ru.university.lab3;
 
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
-import ru.university.lab3.service.ConfigLoader;
+import ru.university.lab3.config.ConfigLoader;
 import ru.university.lab3.service.JsonFlattenerService;
 
 import java.io.File;
@@ -10,7 +10,6 @@ import java.io.IOException;
 import java.util.ArrayList;
 import java.util.List;
 import java.util.Map;
-import java.util.stream.Collectors;
 
 public class App {
     public static void main(String[] args) throws IOException {

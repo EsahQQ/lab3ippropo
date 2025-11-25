@@ -1,4 +1,4 @@
-package ru.university.lab3.service;
+package ru.university.lab3.config;
 
 import java.io.FileReader;
 import java.io.IOException;
